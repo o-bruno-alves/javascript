@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    
+</head>
+<body>
+    <form id="formulario">
+        <input name="nome" type="text" />
+        <input name="email" type="text" />
+        <textarea name="mensagem" id=""></textarea>
+        <input type="submit" value="Enviar" />
+    </form>
+    <script>
+        const formNoticia = document.getElementById("formulario");
+
+        formNoticia.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const dados = new FormData (formNoticia);
+
+            const nome = dados.get("nome");
+            const email = dados.get("email");
+            const mensagem = dados.get("mensagem");
+
+            console.log(`Nome: ${nome} -  Email: ${email} - Mensagem: ${mensagem}`);
+
+        });
+    </script>
+</body>
+</html>

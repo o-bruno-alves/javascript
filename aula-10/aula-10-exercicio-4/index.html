@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    
+</head>
+<body>
+
+    <script>
+        const newSpan = document.createElement("span");
+        newSpan.textContent = "Olá, mundo!";
+        document.body.append(newSpan);
+
+        const classSpan = document.querySelector("span");
+        classSpan.classList.add('novo')
+
+        const toggleSpan = document.getElementById('novo');
+        toggleSpan.classList.toggle('active');
+
+
+    </script>
+</body>
+</html>

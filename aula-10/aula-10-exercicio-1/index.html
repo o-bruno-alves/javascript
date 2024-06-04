@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    
+</head>
+<body>
+    <form id="noticia">
+        <input name="titulo" type="text" />
+        <textarea name="conteudo" id=""></textarea>
+        <input type="submit" value="Enviar" />
+    </form>
+    <script>
+        const formNoticia = document.getElementById("noticia");
+
+        formNoticia.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const dados = new FormData (formNoticia);
+
+            const titulo = dados.get("titulo");
+            const conteudo = dados.get("conteudo");
+
+            console.log(`${titulo} - ${conteudo}`);
+
+            if(conteudo.length > 10) {
+                const erro = document.createElement("span");
+                erro.setAttribute("style", "color:red");
+                erro.append("Demaiado Longo!!!!");
+                formNoticia.append(erro);
+            }
+
+        });
+    </script>
+</body>
+</html>

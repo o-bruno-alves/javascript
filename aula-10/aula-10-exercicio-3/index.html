@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    
+</head>
+<body>
+
+    <script>
+        const container = document.createElement("div");
+        document.body.append(container);
+
+        container.innerHTML = `
+        <ul>
+            <li>Exemplo 01</li>
+            <li>Exemplo02</li>
+        </ul>
+        <p>isto é uma div</p>`;
+
+        const primeiroLi = document.querySelector("li");
+        primeiroLi.insertAdjacentHTML("afterend", "<li>Novo!</li>");
+
+        const elementoP = document.querySelector("p");
+        elementoP.remove();
+    </script>
+</body>
+</html>
